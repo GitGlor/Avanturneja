@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+    <style>
+        /* Add CSS styles for your home page here */
+        body {
+            margin: 0;
+            /* Remove default margin */
+            padding: 0;
+            /* Remove default padding */
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+
+</head>
+
+<body>
+    <iframe src="navbar.html" frameborder="0" scrolling="no" width="100%" height="50"></iframe>
+
+    <div id="avanturnejaMap" style='width: 100%; height: 900px;'></div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibWFwZ2xvciIsImEiOiJjbG41eG9lbW4waTJjMnJvaHZ6aXo5enBuIn0.uxb-CxjcfYYZ2gKkZmh8uw';
+        var map = new mapboxgl.Map({
+            container: 'avanturnejaMap',
+            style: 'mapbox://styles/mapglor/cln69hs9f03cb01pfh9en635l',
+            center: [-77.042793, -12.046374], // Center the map at a specific location
+            zoom: 9 // Set the initial zoom level
+        });
+    </script>
+    <script src="../js/map.js"></script>
+</body>
+
+</html>

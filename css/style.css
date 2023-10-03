@@ -29,7 +29,7 @@ body,
 }
 
 body.light-theme {
-  background-color: #151515;
+  background-color: #2a8c76;
 }
 
 body.light-theme .example h1 {
@@ -46,7 +46,7 @@ body.light-theme .buttons .button {
 }
 
 body.light-theme .buttons .button:hover {
-  color: #151515;
+  color: #2a8c76;
   background-color: #FFFFFF;
 }
 
@@ -162,7 +162,7 @@ body.light-theme .buttons .button:hover {
   margin-top: 10px;
   /* Adjust the top margin as needed */
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #2a8c76;
   /* Adjust the color as needed */
   color: #fff;
   /* Text color */

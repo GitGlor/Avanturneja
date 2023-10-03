@@ -25,6 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
   var accessButton = document.getElementById('accessButton');
 
   accessButton.addEventListener('click', function () {
-    window.location.href = 'work-in-progress.html'
+    window.location.href = 'html/home.html'
   });
 });
