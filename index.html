@@ -2,29 +2,49 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>FlipDown Example</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700,900" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/flipdown/flipdown.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script type="text/javascript" src="js/flipdown/flipdown.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/navbar.css">
+  <style>
+    /* Add CSS styles for your home page here */
+    body {
+      margin: 0;
+      /* Remove default margin */
+      padding: 0;
+      /* Remove default padding */
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+
 </head>
 
 <body>
-  <div class="container">
-    <div class="example">
-      <h1>AVANTURNEJA POČINJE ZA</h1>
-      <div id="flipdown" class="flipdown"></div>
-    </div>
 
-    <div class="button-container">
-      <button id="accessButton">Avanturneja počela</button>
-    </div>
-  </div>
+  <nav>
+    <a class="logo" href="index.html">AVANTURNEJA</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="html/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div id="avanturnejaMap" style='width: 100%; height: 900px;'></div>
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWFwZ2xvciIsImEiOiJjbG4xcHhjaXQwMTZzMmtsN2kwZGZhM3hjIn0.vDDQg7z7oYiEe4M57Tping';
+    var map = new mapboxgl.Map({
+      container: 'avanturnejaMap',
+      style: 'mapbox://styles/mapglor/cln69hs9f03cb01pfh9en635l',
+      center: [19.8416, 45.2671],
+      //center: [-77.042793, -12.046374], // Center the map at a specific location
+      zoom: 9 // Set the initial zoom level
+    });
+  </script>
+  <script src="js/map.js"></script>
 </body>
 
 </html>
